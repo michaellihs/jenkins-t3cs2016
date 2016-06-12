@@ -74,3 +74,17 @@ typo3/sysext/core/Tests/Unit'
 
 }
 ```
+
+1. Add post-update hook in Git (`.git/hooks/post-update`) 
+
+```
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+exec git update-server-info
+curl http://localhost:8081/job/PIPELINE%20Test/build
+```
