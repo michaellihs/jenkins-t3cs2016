@@ -102,6 +102,13 @@ Add a webhook to your Git server, e.g. http://localhost:8081/job/PIPELINE%20Test
 
 [http://217.29.41.21/typo3/sysext/install/Start/Install.php](http://217.29.41.21/typo3/sysext/install/Start/Install.php)
 
+Sketchnote
+==========
+
+![Sketchnote](sketchnote.jpg)
+
+by [Dani](https://twitter.com/dgrammlich)
+
 TODOs
 =====
 
