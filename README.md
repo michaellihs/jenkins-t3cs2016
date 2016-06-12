@@ -75,7 +75,10 @@ typo3/sysext/core/Tests/Unit'
 }
 ```
 
-1. Add post-update hook in Git (`.git/hooks/post-update`) 
+3. Add a Git Hook
+=================
+
+Add post-update hook in Git (`.git/hooks/post-update`) 
 
 ```
 #!/bin/sh
@@ -88,3 +91,9 @@ typo3/sysext/core/Tests/Unit'
 exec git update-server-info
 curl http://localhost:8081/job/PIPELINE%20Test/build
 ```
+
+
+4. Deployment URL
+=================
+
+[http://217.29.41.21/typo3/sysext/install/Start/Install.php](http://217.29.41.21/typo3/sysext/install/Start/Install.php)
