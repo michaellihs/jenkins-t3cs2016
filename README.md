@@ -15,6 +15,7 @@ Vagrant Jenkins Box
 * Composer
   * `/usr/local/bin/composer`
 * PHPUnit in PATH setzen
+* Add ssh key of Jenkins user to the deployment target server
 
 Vagrant Box exportieren
 
@@ -57,21 +58,18 @@ typo3/sysext/core/Build/UnitTests.xml```
 node {
 
     stage 'Git Checkout'
-    sh 'wget https://get.typo3.org/6.2.25 && tar xzf 6.2.25 && mv
-typo3_src-6.2.25/* . && rm 6.2 && rmdir typo3_src-6.2.25' 
+    sh 'wget https://get.typo3.org/6.2.25 && tar xzf 6.2.25 && mv typo3_src-6.2.25/* . && rm 6.2 && rmdir typo3_src-6.2.25' 
 
     stage 'Composer install'
     sh '/usr/local/bin/composer install'
 
 
     stage 'TYPO3 Core Unit Tests'
-    sh './bin/phpunit -c typo3/sysext/core/Build/UnitTests.xml
-typo3/sysext/core/Tests/Unit'
+    sh './bin/phpunit -c typo3/sysext/core/Build/UnitTests.xml typo3/sysext/core/Tests/Unit'
 
     stage 'Deploy'
-
-
-
+    
+    
 }
 ```
 
@@ -97,3 +95,10 @@ curl http://localhost:8081/job/PIPELINE%20Test/build
 =================
 
 [http://217.29.41.21/typo3/sysext/install/Start/Install.php](http://217.29.41.21/typo3/sysext/install/Start/Install.php)
+
+Resources
+=========
+
+* Helmut Hummel's TYPO3 Distribution: [https://github.com/helhum/TYPO3-Distribution](https://github.com/helhum/TYPO3-Distribution)
+* [Jenkins Pipeline Plugin](https://github.com/jenkinsci/pipeline-plugin/blob/master/README.md#introduction)
+* 
