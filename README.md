@@ -105,7 +105,7 @@ Add a webhook to your Git server, e.g. http://localhost:8081/job/PIPELINE%20Test
 Sketchnote
 ==========
 
-![Sketchnote](sketchnote.jpg)
+![Sketchnote](doc/images/sketchnote.jpg)
 
 by [Dani](https://twitter.com/dgrammlich)
 
