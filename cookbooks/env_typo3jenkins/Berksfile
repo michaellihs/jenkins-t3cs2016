@@ -1,0 +1,9 @@
+source 'https://supermarket.chef.io'
+
+metadata
+
+def local_cookbook(cookbook_name)
+  cookbook cookbook_name, path: "../#{cookbook_name}"
+end
+
+local_cookbook 'jenkins'
