@@ -118,7 +118,7 @@ For Chef and Vagrant documentation, see [doc/vagrant-chef.md](doc/vagrant-chef.m
       - [x] Based on Ubuntu 14.04
       - [x] Java
       - [x] Jenkins + Plugins
-      - [ ] Git
+      - [x] Git
       - [ ] Composer
       - [ ] PHP + all required packages
 - [ ] Export a TYPO3 Jenkins Vagrant Box with
