@@ -109,18 +109,25 @@ Sketchnote
 
 by [Dani](https://twitter.com/dgrammlich)
 
-TODOs
-=====
+TODOs Chef / Vagrant
+====================
 
+For Chef and Vagrant documentation, see [doc/vagrant-chef.md](doc/vagrant-chef.md)
+
+- [ ] Write Chef recipe that provides a Jenkins Master for TYPO3 projects
+      - [x] Based on Ubuntu 14.04
+      - [x] Java
+      - [x] Jenkins + Plugins
+      - [ ] Git
+      - [ ] Composer
+      - [ ] PHP + all required packages
 - [ ] Export a TYPO3 Jenkins Vagrant Box with
-      - Java
-      - Jenkins + Plugins
-      - Git
-      - Composer
-      - PHP + required packages
 - [ ] Upload the box to some typo3.org server
+      - [ ] Ask server team for upload space
 - [ ] Provide sample pipeline(s) for different TYPO3 versions
 - [ ] Provide sample configuration(s) for Surf deployment
+- [ ] we are currently using a patched version of the Jenkins community cookbook - fix this if [PR-471](https://github.com/chef-cookbooks/jenkins/pull/471/files) is merged
+- [ ] Jenkins plugins are installed but are not available after provisioning --> restart Jenkins?
 
 Resources
 =========
