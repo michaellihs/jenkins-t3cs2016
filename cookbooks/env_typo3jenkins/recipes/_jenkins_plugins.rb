@@ -7,7 +7,19 @@
   'git' => {:version => nil},
   'git-client' => {:version => nil},
   'git-server' => {:version => nil},
-  'scm-api' => {:version => nil}
+  'scm-api' => {:version => nil},
+  'workflow-aggregator' => {:version => nil},
+  'workflow-api' => {:version => nil},
+  'workflow-basic-steps' => {:version => nil},
+  'workflow-cps' => {:version => nil},
+  'workflow-cps-global-lib' => {:version => nil},
+  'workflow-durable-task-step' => {:version => nil},
+  'workflow-job' => {:version => nil},
+  'workflow-multibranch' => {:version => nil},
+  'workflow-remote-loader' => {:version => nil},
+  'workflow-scm-step' => {:version => nil},
+  'workflow-step-api' => {:version => nil},
+  'workflow-support' => {:version => nil}
 }.each do |plugin_name, plugin_configuration|
 
   jenkins_plugin plugin_name do
