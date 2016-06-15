@@ -134,3 +134,4 @@ Resources
 
 * Helmut Hummel's TYPO3 Distribution: [https://github.com/helhum/TYPO3-Distribution](https://github.com/helhum/TYPO3-Distribution)
 * [Jenkins Pipeline Plugin](https://github.com/jenkinsci/pipeline-plugin/blob/master/README.md#introduction)
+* [TYPO3 Build Job on Travis CI](https://travis-ci.org/TYPO3/TYPO3.CMS/jobs/136893071)
