@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.2">
+  <actions/>
+  <description></description>
+  <displayName>TYPO3 Demo Pipeline</displayName>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+	<hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.4.1">
+	  <useBuildBlocker>false</useBuildBlocker>
+	</hudson.plugins.buildblocker.BuildBlockerProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.5">
+	<script>node {
+
+		stage &apos;Git Checkout&apos;
+		sh &apos;wget https://get.typo3.org/6.2.25 &amp;&amp; tar xzf 6.2.25 &amp;&amp; mv typo3_src-6.2.25/* . &amp;&amp; rm 6.2.25 &amp;&amp; rmdir typo3_src-6.2.25&apos;
+
+			stage &apos;Composer install&apos;
+		sh &apos;/usr/local/bin/composer install&apos;
+
+		stage &apos;TYPO3 Core Unit Tests&apos;
+		sh &apos;./bin/phpunit -c typo3/sysext/core/Build/UnitTests.xml typo3/sysext/core/Tests/Unit&apos;
+
+		stage &apos;Deploy&apos;
+
+	}</script>
+	<sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>
